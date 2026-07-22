@@ -8,11 +8,11 @@
 | Calendar commands fail | Google Calendar got disconnected | `doctor` walks you through reconnecting (claude.ai → Settings → Connectors) |
 | Red error text | Varies | Don't panic, nothing is lost. Type `doctor` and paste the error |
 | Claude feels "blank" / new chat forgot context | Normal — each chat starts fresh | It re-reads your profile automatically; just continue |
-| Nothing works at all | VSCode or extension hiccup | Quit VSCode fully, reopen, try again. Still stuck → `doctor` → WhatsApp us |
+| Nothing works at all | VSCode or extension hiccup | Quit VSCode fully, reopen, try again. Still stuck → `doctor` → contact OTIUM |
 
 ## Support
 
-- **OTIUM WhatsApp:** _(filled in at your install session — see SETUP.md step 0)_
 - **Email:** eric@otium.consulting
+- Bought this with an OTIUM training package? Use the direct channel you were given at purchase.
 
 Your data never leaves this folder — worst case, everything is recoverable. Don't delete the folder; call us instead.

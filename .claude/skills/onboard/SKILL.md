@@ -7,6 +7,19 @@ description: Set up or refresh this AI OS. Use on first run ("set me up", "onboa
 
 You are interviewing the owner of this AI OS so it can serve them personally. Warm, efficient, **one question at a time**. This skill is idempotent: if `profile/profile.md` already exists, show current values and ask only what they want to change.
 
+## Step 0 — tooling check (run before the interview, fix only what's missing)
+
+Check quietly; only talk about what's absent. Neither failure blocks onboarding — install what you can, note the rest, and continue.
+
+1. **Git CLI** — `git --version`. Missing → guide the install (Mac: `xcode-select --install` · Windows: `winget install --id Git.Git`), then re-check until it works.
+2. **Claude CLI** — `claude --version`. Missing → offer to install it (needed for terminal use and the Telegram bot power-up):
+   - Mac/Linux: `curl -fsSL https://claude.ai/install.sh | bash`
+   - Windows (PowerShell): `irm https://claude.ai/install.ps1 | iex`
+   - Fallback if the installer fails: `npm install -g @anthropic-ai/claude-code` (needs Node.js 18+)
+   After installing, have them run `claude` once in a terminal and sign in with the same Claude account.
+
+If an install keeps failing, don't stall the session: continue the interview and tell them `doctor` can finish the tooling later.
+
 ## The interview (7 questions, in this order)
 
 1. **Language** — "Which language should I always use with you: Indonesian, English, or a mix?" Switch to their answer IMMEDIATELY for the rest of the interview and all future sessions.

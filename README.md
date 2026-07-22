@@ -16,7 +16,7 @@ You don't need to memorize these — just talk normally. Claude picks the right 
 
 ## Module 2 (unlocked in your next training)
 
-Long-term knowledge wiki + session memory, visualized as a graph in Obsidian.
+Long-term knowledge wiki + session memory, visualized as a graph in Obsidian (setup: `guide/obsidian.md`).
 
 ## Power-up (optional)
 

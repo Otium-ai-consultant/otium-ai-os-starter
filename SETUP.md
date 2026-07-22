@@ -4,16 +4,15 @@ Internal document for the OTIUM trainer (not the client). Two delivery paths: **
 
 ## Step 0 — one-time template prep (before your FIRST client, not per client)
 
-- [ ] Fill the real OTIUM WhatsApp number in `guide/troubleshooting.md` (Support section) and commit.
-- [ ] Repo is **public** on GitHub (`Otium-ai-consultant/otium-ai-os-starter`, Eric's decision 2026-07-22) — everything committed here is world-readable, including that support number. Use the business WhatsApp, never a personal one, and never commit client data or tokens.
+- [ ] Repo is **public** on GitHub (`Otium-ai-consultant/otium-ai-os-starter`, Eric's decision 2026-07-22) — everything committed here is world-readable. Public support contact = email only (already in `guide/troubleshooting.md`); direct channels (e.g. WhatsApp) are given privately at purchase, never committed. Never commit client data, tokens, or personal numbers.
 - [ ] Keep the prep PDF in `collateral/persiapan-setup.pdf` up to date (source of truth: the Lark doc "OTIUM AI OS Starter: Persiapan dan Setup" — re-export after any revision).
 - [ ] Do one full dry-run of this runbook on a clean macOS user account. Fix friction before selling.
 
 ## Self-serve delivery (default): PDF + Claude-guided setup
 
-1. **Send the client the prep PDF** (`collateral/persiapan-setup.pdf`) via WhatsApp. That's the only artifact they need — the repo is public, no access code required.
-2. The PDF walks them through: install VSCode → subscribe + sign in to Claude → install the Claude Code extension → **paste the bootstrap prompt** (printed in the PDF) into Claude. From there Claude checks/installs git, clones the repo to `~/Documents/AI-OS`, and walks them into the vault + `onboard`.
-3. Stay reachable on WhatsApp during their setup window. After setup, `doctor` is their first line.
+1. **Send the client the prep PDF** (`collateral/persiapan-setup.pdf`) through whichever channel you sold on. That's the only artifact they need — the repo is public, no access code, no verification.
+2. The PDF walks them through: install VSCode → subscribe + sign in to Claude → install the Claude Code extension → **paste the bootstrap prompt** (printed in the PDF) into Claude. From there Claude checks/installs git, clones the repo to `~/Documents/AI-OS`, and walks them into the vault + `onboard` (which also checks/installs the Claude CLI).
+3. Stay reachable on your sales channel during their setup window. After setup, `doctor` is their first line.
 
 ## Guided install session (premium, in person)
 
@@ -24,7 +23,6 @@ Everything below is the in-person path — same product, you drive the 3-hour se
 - [ ] Laptop (macOS or Windows), charged, admin rights
 - [ ] **Claude paid subscription** (Pro minimum) — email them the signup link; verify before the session
 - [ ] Google account they actually use for their calendar
-- [ ] WhatsApp on their phone (support channel)
 
 ## Install session (~3h)
 
@@ -38,13 +36,13 @@ Everything below is the in-person path — same product, you drive the 3-hour se
 | 6 | Run `onboard` — you guide, THEY type. Their hands on the keyboard from here on | 25 min |
 | 7 | Guided practice: 1 real event via `calendar` (verify it appears in their phone's calendar app — that's the wow moment), 2 real tasks via `tasks`, 1 real fact via `capture` | 45 min |
 | 8 | Break something on purpose (e.g. ask about calendar with WiFi off) → have THEM run `doctor` | 10 min |
-| 9 | Walk through `guide/command-card.md`, set the morning-coffee habit, save OTIUM WhatsApp in their phone | 15 min |
-| 10 | Optional if time allows: install Obsidian, open the vault once (teaser for Module 2's graph view) | 10 min |
+| 9 | Walk through `guide/command-card.md`, set the morning-coffee habit, save the OTIUM support contact in their phone | 15 min |
+| 10 | Optional if time allows: Obsidian per `guide/obsidian.md` — open the vault once, show graph view (teaser for Module 2) | 10 min |
 
 ## After the session (same day)
 
 - [ ] Record client + install date + machine/OS + git-or-zip in OTIUM's client tracking
-- [ ] WhatsApp them the command card as an image + "reply here if anything feels off"
+- [ ] Send them the command card + "reply here if anything feels off" (channel used at purchase)
 
 ## Updating a client later (paid tune-up visit)
 

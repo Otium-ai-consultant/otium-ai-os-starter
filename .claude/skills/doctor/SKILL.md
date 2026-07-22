@@ -13,7 +13,7 @@ The user may be frustrated and is not technical. Be calm, reassuring, and give *
 2. **Calendar connection** — try listing the user's calendars with the Google Calendar tools. Failure/absent → guide them: open claude.ai in the browser → Settings → Connectors → Google Calendar → Connect → sign in with their Google account → back in VSCode, try again.
 3. **Skills intact** — list `.claude/skills/`. Expected folders: `onboard, calendar, tasks, capture, doctor, wiki, session-handoff`. Missing folders → this needs OTIUM (see step 5).
 4. **Git state** — run `git status`. Untracked/modified files under `profile/`, `tasks/`, `wiki/`, `sessions/` are **NORMAL** (that's their data — reassure them). Merge conflicts, detached HEAD, or anything else odd → do NOT attempt destructive fixes; go to step 5.
-5. **Escalate to OTIUM** — compose a WhatsApp message the user can copy-paste to the support contact listed in `guide/troubleshooting.md`:
+5. **Escalate to OTIUM** — compose a short message the user can copy-paste to the support contact listed in `guide/troubleshooting.md` (email, or whichever channel OTIUM gave them):
 
 ```
 Halo OTIUM, saya <name> (<business>).
