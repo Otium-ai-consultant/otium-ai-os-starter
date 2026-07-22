@@ -43,6 +43,7 @@ Client data is gitignored by design → `cd ~/Documents/AI-OS && git pull` is al
 
 Run `onboard` → activate modules `wiki` + `session-handoff` → teach the 3-rule schema → store 3 real pieces of knowledge together → open Obsidian graph view as the session climax.
 
-## Optional power-up
+## Optional power-ups
 
-Superpowers plugin (official marketplace, don't vendor): teaches Claude disciplined brainstorming/verification. Only for clients who show appetite — skip for everyone else.
+- **Superpowers plugin** (official marketplace, don't vendor): teaches Claude disciplined brainstorming/verification. Only for clients who show appetite — skip for everyone else.
+- **Telegram bot** (`guide/telegram-bot.md`): chat with the AI OS from the phone, runs on the client's own machine. Needs Node.js 18+ and the `claude` CLI callable from terminal — treat as a separate mini-session (~30 min), only for clients comfortable with the trade-offs (bot offline when laptop sleeps; keep tools read-only).

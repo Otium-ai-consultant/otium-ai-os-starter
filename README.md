@@ -18,5 +18,9 @@ You don't need to memorize these — just talk normally. Claude picks the right 
 
 Long-term knowledge wiki + session memory, visualized as a graph in Obsidian.
 
+## Power-up (optional)
+
+Chat with your AI OS from your phone via Telegram — see `guide/telegram-bot.md`.
+
 ---
 Set up and supported by **OTIUM** · otium.consulting · support contact in `guide/troubleshooting.md`
