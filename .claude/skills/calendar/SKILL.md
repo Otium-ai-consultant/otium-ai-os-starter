@@ -24,3 +24,4 @@ Read `profile/calendar-config.md`. It defines timezone, categories→colors, pro
 - "What's my week look like?" → list events grouped per day, flag conflicts with protected blocks.
 - Reschedule/cancel → find the event, confirm which one, then update/delete.
 - Recurring events → confirm frequency and end condition explicitly.
+
