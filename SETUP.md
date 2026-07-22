@@ -1,12 +1,25 @@
-# SETUP — OTIUM Install Session Runbook
+# SETUP — OTIUM Delivery Runbook
 
-Internal document for the OTIUM trainer (not the client). Follow top-to-bottom; target durations keep the session inside 3 hours.
+Internal document for the OTIUM trainer (not the client). Two delivery paths: **self-serve** (default: client gets the prep PDF, Claude guides them to a working clone) and **guided install session** (premium, in person).
 
 ## Step 0 — one-time template prep (before your FIRST client, not per client)
 
 - [ ] Fill the real OTIUM WhatsApp number in `guide/troubleshooting.md` (Support section) and commit.
 - [ ] Host this repo as a **private** GitHub repo under the OTIUM org.
+- [ ] Keep the prep PDF in `collateral/persiapan-setup.pdf` up to date (source of truth: the Lark doc "OTIUM AI OS Starter: Persiapan dan Setup" — re-export after any revision).
 - [ ] Do one full dry-run of this runbook on a clean macOS user account. Fix friction before selling.
+
+## Self-serve delivery (default): PDF + Claude-guided setup
+
+1. **Per client, create a read-only access code** (fine-grained GitHub PAT): github.com → Settings → Developer settings → Fine-grained personal access tokens → Generate new token → Resource owner `Otium-ai-consultant` → Repository access: *Only select repositories* → `otium-ai-os-starter` → Permissions: **Contents = Read-only** → Expiration 90 days. This token is the client's "kode akses".
+2. **Send the client two things, separately:** the prep PDF (`collateral/persiapan-setup.pdf`) and — in a separate WhatsApp message, never inside the PDF — the kode akses.
+3. The PDF walks them through: install VSCode → subscribe + sign in to Claude → install the Claude Code extension → **paste the bootstrap prompt** (printed in the PDF) into Claude. From there Claude checks/install git, asks for the kode akses, clones to `~/Documents/AI-OS`, strips the token from the git remote, and walks them into the vault + `onboard`.
+4. Stay reachable on WhatsApp during their setup window. After setup, `doctor` is their first line.
+5. Revoke the token after a successful setup (or let it expire). Tune-up pulls later can use a fresh token.
+
+## Guided install session (premium, in person)
+
+Everything below is the in-person path — same product, you drive the 3-hour session yourself.
 
 ## Pre-session checklist (send to client 2 days before)
 
