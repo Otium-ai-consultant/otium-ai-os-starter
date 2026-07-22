@@ -54,5 +54,6 @@ Run `onboard` → activate modules `wiki` + `session-handoff` → teach the 3-ru
 
 ## Optional power-ups
 
-- **Superpowers plugin** (official marketplace, don't vendor): teaches Claude disciplined brainstorming/verification. Only for clients who show appetite — skip for everyone else.
+- **Superpowers + Context-Mode plugins** (install from upstream `obra/superpowers` and `mksglu/context-mode`, never vendor): disciplined workflow + context savings. Guided install = section 5 of `guide/tools-setup-prompt.md`. Only for clients who show appetite — the prompt lets them skip it.
+- **Obsidian MCP** (`guide/obsidian.md`): Claude controls the Obsidian app via Local REST API — section 4 of the same prompt.
 - **Telegram bot** (`guide/telegram-bot.md`): chat with the AI OS from the phone, runs on the client's own machine. Needs Node.js 18+ and the `claude` CLI callable from terminal — treat as a separate mini-session (~30 min), only for clients comfortable with the trade-offs (bot offline when laptop sleeps; keep tools read-only).

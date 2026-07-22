@@ -1,12 +1,12 @@
 # Tools & MCP Setup Prompt (all-in-one)
 
-One paste-able prompt that makes Claude walk a non-technical user through **all four**: installing the **Git CLI**, installing the **Claude CLI**, **connecting MCP servers** (Google Calendar first, then others), and **connecting Obsidian to Claude** via the Local REST API plugin. Use it before onboarding, after a laptop change, or when any single piece breaks — the prompt checks before installing, so healthy parts are skipped, and the user can say "skip" to any section.
+One paste-able prompt that makes Claude walk a non-technical user through **all five**: installing the **Git CLI**, installing the **Claude CLI**, **connecting MCP servers** (Google Calendar first, then others), **connecting Obsidian to Claude** via the Local REST API plugin, and **installing the Superpowers + Context-Mode plugins**. Use it before onboarding, after a laptop change, or when any single piece breaks — the prompt checks before installing, so healthy parts are skipped, and the user can say "skip" to any section.
 
 How to use: copy the block below, paste it into any Claude chat (VSCode extension or terminal), press Enter, follow the conversation.
 
 ```text
 Halo Claude. Kamu adalah pemandu setup untuk pemula non-teknis. Bantu aku
-menyiapkan EMPAT hal di bawah, SATU PER SATU — kerjakan satu langkah, tunggu
+menyiapkan LIMA hal di bawah, SATU PER SATU — kerjakan satu langkah, tunggu
 hasilnya, baru lanjut. Jelaskan tanpa istilah teknis. Kalau ada error, jangan
 lompat: pandu aku pelan-pelan sampai beres. Kalau ada bagian yang tidak aku
 butuhkan, aku akan bilang "skip".
@@ -53,6 +53,24 @@ BAGIAN 4 — Sambungkan Obsidian ke Claude (MCP via plugin Local REST API)
    layar = berhasil. Ingatkan aku: Obsidian harus dalam keadaan TERBUKA
    supaya koneksi ini hidup.
 
+BAGIAN 5 — Plugin Claude Code: Superpowers & Context-Mode
+0. Kalau aku belum butuh plugin tambahan, bagian ini di-skip saja.
+1. Jelaskan dulu satu kalimat per plugin: Superpowers = disiplin kerja
+   (brainstorm dulu, bikin rencana, verifikasi sebelum bilang selesai);
+   Context-Mode = hemat memori percakapan saat mengolah data besar.
+2. Perintah plugin harus KUKETIK SENDIRI di kotak chat Claude (bukan kamu
+   yang menjalankan). Pandu aku mengetik ini satu per satu, tunggu tiap
+   perintah selesai:
+   /plugin marketplace add obra/superpowers
+   /plugin install superpowers@superpowers-dev
+   /plugin marketplace add mksglu/context-mode
+   /plugin install context-mode@context-mode
+   (Kalau nama setelah tanda @ tidak cocok, suruh aku ketik /plugin dan
+   pilih dari daftar yang muncul.)
+3. Setelah terpasang: suruh aku restart VSCode (atau buka sesi Claude
+   baru), lalu cek dengan mengetik /plugin — kedua plugin harus
+   berstatus enabled.
+
 ATURAN: jangan pernah jalankan perintah destruktif; jangan pernah minta
 password-ku (login selalu lewat browser resmi); API key Obsidian adalah
 kunci vault-ku — jangan disimpan di file yang ikut ke git dan jangan
@@ -65,4 +83,5 @@ Notes for the OTIUM trainer:
 - The `onboard` skill already runs the Git + Claude CLI checks (Step 0) — this prompt is the standalone superset for machines that don't have the vault yet, or for fixing individual pieces (say "skip" to the rest).
 - Google Calendar connects through the claude.ai connector (browser OAuth) — same integration the `calendar` skill uses. No Google Cloud setup needed.
 - Section 4 details and troubleshooting (cert errors, port 27123 vs 27124, key hygiene) live in `guide/obsidian.md`.
+- Section 5 sources are pinned to the upstreams OTIUM actually runs: Superpowers from `obra/superpowers` (marketplace name `superpowers-dev`), Context-Mode from `mksglu/context-mode`. Both are third-party — never vendor them; clients always install from upstream so updates keep flowing.
 - `claude mcp add` for anything custom stays explain-first: MCP servers run code on the user's machine.
